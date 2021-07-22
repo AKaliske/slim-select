@@ -214,7 +214,6 @@ export default class SlimSelect {
           newData.unshift(r)
         }
       } else {
-        newData.unshift(selected)
 
         // Look for duplicate selected if so remove it
         for (let i = 0; i < newData.length; i++) {
@@ -222,6 +221,7 @@ export default class SlimSelect {
             newData.splice(i, 1);
           }
         }
+        newData.unshift(selected)
 
         // Add placeholder if it doesnt already have one
         let hasPlaceholder = false
